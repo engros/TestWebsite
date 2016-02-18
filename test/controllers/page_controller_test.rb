@@ -22,10 +22,6 @@ class PageControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get sign_up" do
-    get :sign_up
-    assert_response :success
-  end
 
   test "should get account" do
     get :account

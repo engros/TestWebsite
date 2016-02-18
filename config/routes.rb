@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'page#home'
   get 'home' => 'page#home'
-  get 'advanced_search' => 'page#home'
+  get 'advanced_search' => 'page#advanced_search'
   get 'contact_us' => 'page#contact_us'
   get 'login' => 'page#login'
   get 'sign_up' => 'page#sign_up'
