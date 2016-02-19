@@ -11,9 +11,6 @@ class PageController < ApplicationController
   def login
   end
 
-  def sign_up
-  end
-
   def account
   end
 

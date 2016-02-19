@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise' #for authentication
 gem 'will_paginate', '3.1.0' #to paginate pages
-gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5' #plugin that provides basic hashing algorithm to encrypt passwords
+gem 'bcrypt', '3.1.9' #plugin that provides basic hashing algorithm to encrypt passwords
 gem 'puma' #to use puma web server instead of webrick
 gem 'faker'
 gem 'kaminari'

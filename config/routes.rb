@@ -6,14 +6,13 @@ Rails.application.routes.draw do
   get 'advanced_search' => 'page#advanced_search'
   get 'contact_us' => 'page#contact_us'
   get 'login' => 'page#login'
-  get 'sign_up' => 'page#sign_up'
   get 'account' => 'page#account'
   get 'friends' => 'page#friends'
   get 'my_store' => 'page#my_store'
   get 'help' => 'page#help'
   get 'about_us' => 'page#about_us'
-  get 'signup'  => 'users#new'
-
+  get 'sign_up'  => 'users#new'
+  resources :users #ensures that a POST request to /users is handled by the create action and that it can find a user in the database
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

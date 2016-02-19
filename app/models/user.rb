@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   validates :email, presence:   true, length: { maximum: 255 },
             format:     { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
-
+  has_secure_password
+  validates :password, presence: true, length: { minimum: 6 }
+  validates :password_confirmation, presence: true
 end
 
 # before_save
@@ -15,4 +17,5 @@ end
 # format: { with: VALID_EMAIL_REGEX } , ensures that only email addresses that match the pattern will be considered valid.
 # uniqueness: true, emails should not have duplicates.
 # uniqueness: { case_sensitive: false }, turns off case-sensitivity so emails such as FOOBAR@example.com is the same as foobar@example.com. Rails infer that uniqueness also must be true.
-# has_secure_password
+# has_secure_password, ses a state-of-the-art hash function called bcrypt. By hashing the password with bcrypt, we ensure that an attacker won’t be able to log in to the site even if they manage to obtain a copy of the database.
+# validates :password, presence: true, length: { minimum: 6 } , set minimum password to 6 characters
