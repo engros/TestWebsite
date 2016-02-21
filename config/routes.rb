@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'users/new'
 
   root 'page#home'
@@ -12,6 +14,9 @@ Rails.application.routes.draw do
   get 'help' => 'page#help'
   get 'about_us' => 'page#about_us'
   get 'sign_up'  => 'users#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   resources :users # ensures that a POST request to /users is handled by the create action
                    # and that it can find a user in the database which will then redirect to users#show
   # The priority is based upon order of creation: first created -> highest priority.

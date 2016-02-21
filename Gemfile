@@ -1,5 +1,17 @@
 source 'https://rubygems.org'
 
+# begin Custom gems
+gem 'bcrypt',                  '3.1.9'
+gem 'faker',                   '1.6.1'
+gem 'carrierwave',             '0.10.0'
+gem 'mini_magick',             '~> 4.4'
+gem 'fog',                     '~> 1.37'
+gem 'will_paginate',           '~> 3.1'
+gem 'bootstrap-will_paginate', '0.0.10'
+gem 'bootstrap-sass',          '3.3.6'
+
+# end Custom gems
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 
@@ -30,37 +42,26 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'pg', '~> 0.15'# Use postgresql as the database for Active Record
-  gem 'rails_12factor', '0.0.2'
-  gem 'devise' #for authentication
-  gem 'will_paginate', '3.1.0' #to paginate pages
-  gem 'bcrypt', '3.1.9' #plugin that provides basic hashing algorithm to encrypt passwords
-  gem 'puma' #to use puma web server instead of webrick
-  gem 'faker'
-  gem 'kaminari'
-  gem 'actionview-encoded_mail_to'
-  gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-end
-
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
 
+group :development, :test do
+  gem 'pg', '~> 0.18.4'
+  gem 'byebug',      '8.2.2'
+  gem 'spring',      '1.1.3'
+end
+
+group :test do
+  gem 'minitest-reporters', '1.0.5'
+  gem 'mini_backtrace',     '0.1.3'
+  gem 'guard-minitest',     '2.3.1'
+end
+
 group :production do
-  gem 'pg', '~> 0.15'# Use postgresql as the database for Active Record
-  gem 'rails_12factor', '0.0.2'
-  gem 'devise' #for authentication
-  gem 'will_paginate', '3.1.0' #to paginate pages
-  gem 'bcrypt', '3.1.9' #plugin that provides basic hashing algorithm to encrypt passwords
-  gem 'puma' #to use puma web server instead of webrick
-  gem 'faker'
-  gem 'kaminari'
-  gem 'actionview-encoded_mail_to'
-  gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+  gem 'pg', '~> 0.18.4'
+  gem 'rails_12factor', '~> 0.0.3'
+  gem 'puma', '~> 2.16'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
