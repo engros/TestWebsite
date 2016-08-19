@@ -20,9 +20,9 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  host: localhost
-  username: mkalmacin
-  password: iammark01
+ # host: localhost
+ # username: mkalmacin
+ # password: iammark01
 
 development:
   adapter: postgresql
@@ -95,7 +95,4 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: testwebsite
-  host: localhost
-  username: mkalmacin
-  password: iammark01
+
