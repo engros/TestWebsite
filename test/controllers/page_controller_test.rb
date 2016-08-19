@@ -17,16 +17,6 @@ class PageControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get login" do
-    get :login
-    assert_response :success
-  end
-
-
-  test "should get account" do
-    get :account
-    assert_response :success
-  end
 
   test "should get contact" do
     get :contact_us

@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'home' => 'page#home'
   get 'advanced_search' => 'page#advanced_search'
   get 'contact_us' => 'page#contact_us'
-  get 'login' => 'page#login'
   get 'account' => 'page#account'
   get 'friends' => 'page#friends'
   get 'my_store' => 'page#my_store'
@@ -19,6 +18,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   resources :users # ensures that a POST request to /users is handled by the create action
                    # and that it can find a user in the database which will then redirect to users#show
+                   # resourceful route provides a mapping between HTTP verbs and URLs to controller actions (CRUD)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

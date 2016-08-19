@@ -1,9 +1,11 @@
+<!-- Sign up page form-->
+
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user) do |f| %> <!-- form_for(@user) infers a post to user route path-->
         <%= render 'shared/error_messages' %>
 
         <%= f.label :name %>
