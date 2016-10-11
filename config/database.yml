@@ -28,10 +28,11 @@ development:
   adapter: postgresql
   encoding: unicode
   pool: 5
+  #timeout: 5000
   database: testwebsite
   host: localhost
-  username: mkalmacin
-  password: iammark01
+  username: postgres
+  password: iamadmin00
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -67,10 +68,11 @@ test:
   adapter: postgresql
   encoding: unicode
   pool: 5
+  timeout: 5000
   database: testwebsite
   host: localhost
-  username: mkalmacin
-  password: iammark01
+  username: postgres
+  password: iamadmin00
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -95,4 +97,5 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
+  timeout: 5000
 
