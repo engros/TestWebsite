@@ -47,7 +47,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'puma'
+  gem 'puma',        '3.4.0'
 end
 
 group :development, :test do
@@ -57,7 +57,7 @@ end
 
 group :development, :production do
   gem 'pg'
-  gem 'puma'
+  gem 'puma',        '3.4.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
