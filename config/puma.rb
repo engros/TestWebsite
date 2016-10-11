@@ -1,6 +1,6 @@
 # The configuration file for the production puma webserver for Heroku.
 
-workers Integer(ENV['WEB_CONCURRENCY'] || 2)
+#workers Integer(ENV['WEB_CONCURRENCY'] || 2) --doesn't work in jruby or windows
 threads_count = Integer(ENV['MAX_THREADS'] || 5)
 threads threads_count, threads_count
 

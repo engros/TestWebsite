@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   resources :users # ensures that a POST request to /users is handled by the create action
-                   # and that it can find a user in the database which will then redirect to users#show
+                   # and that it can find a user (GET) in the database which will then redirect to users#show
                    # resourceful route provides a mapping between HTTP verbs and URLs to controller actions (CRUD)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
